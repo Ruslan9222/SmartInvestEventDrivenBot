@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: TgBotService
+
+telegram:
+  bot:
+    name: SmartInvestProject_bot
+    token: 8819761490:AAE_FLLuFQnt45cunL6HIop9osam5MqdWvQ
