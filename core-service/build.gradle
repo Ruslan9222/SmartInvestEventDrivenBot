@@ -1,0 +1,20 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+}
+
+description = 'Core business logic: portfolios, price alerts, Kafka consumer/producer'
+
+dependencies {
+    implementation project(':commons')
+    implementation libs.spring.boot.starter.web
+    implementation libs.spring.boot.starter.validation
+    implementation libs.spring.boot.starter.data.jpa
+    implementation libs.liquibase.core
+    implementation libs.spring.kafka
+    implementation libs.springdoc.openapi
+
+    runtimeOnly libs.postgresql
+
+    testImplementation libs.spring.boot.starter.test
+    testRuntimeOnly libs.junit.platform.launcher
+}

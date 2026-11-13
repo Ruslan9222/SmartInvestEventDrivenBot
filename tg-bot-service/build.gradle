@@ -1,0 +1,15 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+}
+
+description = 'Telegram bot, Kafka consumer for alert notifications'
+
+dependencies {
+    implementation project(':commons')
+    implementation libs.spring.boot.starter.web
+    implementation libs.spring.kafka
+    implementation libs.telegrambots
+
+    testImplementation libs.spring.boot.starter.test
+    testRuntimeOnly libs.junit.platform.launcher
+}

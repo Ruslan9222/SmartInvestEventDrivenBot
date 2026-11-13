@@ -1,0 +1,30 @@
+[versions]
+spring-boot = "4.1.0"
+spring-dependency-management = "1.1.7"
+springdoc = "3.0.0"
+telegrambots = "6.9.7.1"
+
+[libraries]
+# Spring Boot Starters
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-boot-starter-cache = { module = "org.springframework.boot:spring-boot-starter-cache" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+
+# Kafka & Database
+spring-kafka = { module = "org.springframework.kafka:spring-kafka" }
+liquibase-core = { module = "org.liquibase:liquibase-core" }
+postgresql = { module = "org.postgresql:postgresql" }
+
+# Third-party & Utilities
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine" }
+lombok = { module = "org.projectlombok:lombok" }
+jackson-annotations = { module = "com.fasterxml.jackson.core:jackson-annotations" }
+springdoc-openapi = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc" }
+telegrambots = { module = "org.telegram:telegrambots", version.ref = "telegrambots" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }

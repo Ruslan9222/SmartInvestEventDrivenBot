@@ -1,0 +1,18 @@
+plugins {
+    alias(libs.plugins.spring.boot)
+}
+
+description = 'Market data provider: CoinGecko client, caching, Kafka producer'
+
+dependencies {
+    implementation project(':commons')
+    implementation libs.spring.boot.starter.web
+    implementation libs.spring.boot.starter.validation
+    implementation libs.spring.boot.starter.cache
+    implementation libs.caffeine
+    implementation libs.spring.kafka
+    implementation libs.springdoc.openapi
+
+    testImplementation libs.spring.boot.starter.test
+    testRuntimeOnly libs.junit.platform.launcher
+}

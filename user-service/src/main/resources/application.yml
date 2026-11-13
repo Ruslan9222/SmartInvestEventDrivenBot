@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/smart-invest-event-driven-bot
+    username: user
+    password: user
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: false
